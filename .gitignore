@@ -23,3 +23,10 @@ node_modules
 
 ### example ###
 public/lib/
+
+examples/public/uploads/
+examples/tmp/
+examples/public/lib/
+
+package-lock.json
+examples/package-lock.json

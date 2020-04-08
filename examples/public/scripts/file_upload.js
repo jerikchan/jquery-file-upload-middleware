@@ -1,6 +1,8 @@
 $('#location_gallery').fileupload({
+    // forceIframeTransport: true,
+    redirect: location.protocol + '//' + location.host + '/cors/result.html?%s',
     dataType:'json',
-    url:'/upload/location',
+    url:'http://172.17.0.138:3001/upload/location',
     autoUpload: true,
     sequentialUploads:true,
     acceptFileTypes:/(\.|\/)(gif|jpe?g|png)$/i,
@@ -86,7 +88,7 @@ $('#location_gallery').fileupload({
 
 $('#location_cover').fileupload({
     dataType:'json',
-    url:'/upload/location',
+    url:'http://172.17.0.138:3001/upload/location',
     autoUpload: true,
     acceptFileTypes:/(\.|\/)(gif|jpe?g|png)$/i,
     process:[
