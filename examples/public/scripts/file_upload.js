@@ -1,12 +1,13 @@
-var requestDomain = 'http://172.17.0.138:3001';
+// var requestUrl = 'http://172.17.0.138:3001' + '/upload/location';
+var requestUrl = 'http://arch.upload.aaa.cn/m/21/upload?cmd=arch-upload-test';
 var redirectUrl = location.protocol + '//' + location.host + '/cors/result.html?%s';
-var forceIframeTransport = true;
+var forceIframeTransport = false;
 
 $('#location_gallery').fileupload({
     forceIframeTransport: forceIframeTransport,
     redirect: redirectUrl,
     dataType:'json',
-    url: requestDomain + '/upload/location',
+    url: requestUrl,
     autoUpload: true,
     sequentialUploads:true,
     acceptFileTypes:/(\.|\/)(gif|jpe?g|png)$/i,
@@ -92,7 +93,7 @@ $('#location_gallery').fileupload({
 
 $('#location_cover').fileupload({
     dataType:'json',
-    url: requestDomain + '/upload/location',
+    url: requestUrl,
     autoUpload: true,
     acceptFileTypes:/(\.|\/)(gif|jpe?g|png)$/i,
     process:[
