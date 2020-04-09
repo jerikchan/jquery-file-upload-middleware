@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <head>
     <title>{{title}}</title>
-    <link rel="stylesheet" type="text/css" href="//blueimp.github.io/jQuery-File-Upload/css/jquery.fileupload.css">
-    <link rel="stylesheet" type="text/css" href="//blueimp.github.io/jQuery-File-Upload/css/jquery.fileupload-ui.css">
+    <link rel="stylesheet" type="text/css" href="/scripts/jQuery-File-Upload/css/jquery.fileupload.css">
+    <link rel="stylesheet" type="text/css" href="/scripts/jQuery-File-Upload/css/jquery.fileupload-ui.css">
     <link rel="stylesheet" type="text/css" href="/styles/style.css" />
 </head>
 <body>
@@ -22,7 +22,7 @@
                         </p>
                         <div id="gallery_dropzone" class="fileupload-buttonbar">
                             <span class="btn fileinput-button">
-                                <span>Gallery Image Upload</span>
+                                <div>Gallery Image Upload</div>
                                 <input id="location_gallery" type="file" name="gallery[]" multiple>
                             </span>
                             <div id="gallery_progress" class="progressbar" role="progressbar" aria-valuemin="0" aria-valuemax="100">
@@ -42,7 +42,7 @@
                         </p>
                         <div id="cover_dropzone" class="fileupload-buttonbar">
                             <span class="btn fileinput-button">
-                                <span>Cover Image Upload</span>
+                                <div>Cover Image Upload</div>
                                 <input id="location_cover" type="file">
                             </span>
                             <div id="cover_progress" class="progressbar" role="progressbar" aria-valuemin="0"
@@ -66,29 +66,36 @@
     </div>
 
 </div>
-<script src="https://cdn.jsdelivr.net/npm/promise-polyfill@8/dist/polyfill.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/fetch-polyfill@0.8.2/fetch.js"></script>
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.js"></script>
-<script src="//blueimp.github.io/jQuery-File-Upload/js/vendor/jquery.ui.widget.js"></script>
-<script src="//blueimp.github.io/JavaScript-Load-Image/js/load-image.js"></script>
-<script src="//blueimp.github.io/JavaScript-Load-Image/js/load-image-scale.js"></script>
-<script src="//blueimp.github.io/JavaScript-Load-Image/js/load-image-meta.js"></script>
-<script src="/scripts/load-image-fetch.js"></script>
-<script src="//blueimp.github.io/JavaScript-Load-Image/js/load-image-orientation.js"></script>
-<script src="//blueimp.github.io/JavaScript-Load-Image/js/load-image-exif.js"></script>
-<script src="//blueimp.github.io/JavaScript-Load-Image/js/load-image-exif-map.js"></script>
-<script src="//blueimp.github.io/JavaScript-Load-Image/js/load-image-iptc.js"></script>
-<script src="//blueimp.github.io/JavaScript-Load-Image/js/load-image-iptc-map.js"></script>
-<script src="//blueimp.github.io/JavaScript-Canvas-to-Blob/js/canvas-to-blob.js"></script>
-<script src="//blueimp.github.io/jQuery-File-Upload/js/jquery.iframe-transport.js"></script>
-<script src="//blueimp.github.io/jQuery-File-Upload/js/jquery.fileupload.js"></script>
-<script src="//blueimp.github.io/jQuery-File-Upload/js/jquery.fileupload-process.js"></script>
-<script src="//blueimp.github.io/jQuery-File-Upload/js/jquery.fileupload-image.js"></script>
-<script src="//blueimp.github.io/jQuery-File-Upload/js/jquery.fileupload-audio.js"></script>
-<script src="//blueimp.github.io/jQuery-File-Upload/js/jquery.fileupload-video.js"></script>
-<script src="//blueimp.github.io/jQuery-File-Upload/js/jquery.fileupload-validate.js"></script>
-<script src="//blueimp.github.io/jQuery-File-Upload/js/cors/jquery.xdr-transport.js"></script>
-<script src="//blueimp.github.io/jQuery-File-Upload/js/jquery.fileupload-ui.js"></script>
+<script src="/scripts/debug.js"></script>
+<script>
+    var log = debug('logger');
+    window.onerror = function(err, message, stack) {
+        log(err, message, stack);
+    };
+</script>
+<script src="/scripts/npm/promise-polyfill@8/dist/polyfill.js"></script>
+<script src="/scripts/npm/fetch-polyfill@0.8.2/fetch.js"></script>
+<script src="/scripts/jquery/1.10.2/jquery.js"></script>
+<script src="/scripts/jQuery-File-Upload/js/vendor/jquery.ui.widget.js"></script>
+<script src="/scripts/JavaScript-Load-Image/js/load-image.js"></script>
+<script src="/scripts/JavaScript-Load-Image/js/load-image-scale.js"></script>
+<script src="/scripts/JavaScript-Load-Image/js/load-image-meta.js"></script>
+<script src="/scripts/JavaScript-Load-Image/js/load-image-fetch.js"></script>
+<script src="/scripts/JavaScript-Load-Image/js/load-image-orientation.js"></script>
+<script src="/scripts/JavaScript-Load-Image/js/load-image-exif.js"></script>
+<script src="/scripts/JavaScript-Load-Image/js/load-image-exif-map.js"></script>
+<script src="/scripts/JavaScript-Load-Image/js/load-image-iptc.js"></script>
+<script src="/scripts/JavaScript-Load-Image/js/load-image-iptc-map.js"></script>
+<script src="/scripts/JavaScript-Canvas-to-Blob/js/canvas-to-blob.js"></script>
+<script src="/scripts/jQuery-File-Upload/js/jquery.iframe-transport.js"></script>
+<script src="/scripts/jQuery-File-Upload/js/jquery.fileupload.js"></script>
+<script src="/scripts/jQuery-File-Upload/js/jquery.fileupload-process.js"></script>
+<script src="/scripts/jQuery-File-Upload/js/jquery.fileupload-image.js"></script>
+<script src="/scripts/jQuery-File-Upload/js/jquery.fileupload-audio.js"></script>
+<script src="/scripts/jQuery-File-Upload/js/jquery.fileupload-video.js"></script>
+<script src="/scripts/jQuery-File-Upload/js/jquery.fileupload-validate.js"></script>
+<script src="/scripts/jQuery-File-Upload/js/cors/jquery.xdr-transport.js"></script>
+<script src="/scripts/jQuery-File-Upload/js/jquery.fileupload-ui.js"></script>
 <script type="text/javascript" src="/scripts/file_upload.js"></script>
 </body>
 </html>
